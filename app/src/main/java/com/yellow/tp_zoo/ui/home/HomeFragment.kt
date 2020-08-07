@@ -1,10 +1,13 @@
 package com.yellow.tp_zoo.ui.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -26,6 +29,11 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+
+        var btn_test: Button = root.findViewById(R.id.btn_test)
+        btn_test.text = "Button"
+        btn_test.setOnClickListener {}
+
         return root
     }
 }

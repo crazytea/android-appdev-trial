@@ -17,7 +17,7 @@ class GetZooData {
                     zooData = ArrayList<DataZooInfo>()
                 }
                 // CSV資料轉換
-                for (i in 0 until data.size) {
+                for (i in 1 until data.size) {
 //                    println("[" + i + "]" + data[i][1])
                     zooData!!.add(
                         DataZooInfo(

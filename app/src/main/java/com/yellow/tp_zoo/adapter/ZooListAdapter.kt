@@ -3,9 +3,10 @@ package com.yellow.tp_zoo.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.yellow.tp_zoo.DataCapture.GetZooData
+import com.bumptech.glide.Glide
 import com.yellow.tp_zoo.DataModel.DataZooInfo
 import com.yellow.tp_zoo.R
 
@@ -15,11 +16,12 @@ class ZooListAdapter (private val mData: ArrayList<DataZooInfo>) : RecyclerView.
         private val textView_name: TextView = itemView?.findViewById(R.id.txt_zooname)
         private val textView_category: TextView = itemView?.findViewById(R.id.txt_category)
         private val textView_memo: TextView = itemView?.findViewById(R.id.txt_zoomemo)
+        private val imageview_pic: ImageView = itemView?.findViewById(R.id.img_pic)
         fun bind(value: DataZooInfo) {
             textView_name.text = "${value.E_Name}"
             textView_category.text = "${value.E_Category}"
             textView_memo.text = "${value.E_Memo}"
-
+            Glide.with(itemView.context).load(value.E_Pic_URL).centerCrop().into(imageview_pic)
         }
     }
 

@@ -2,7 +2,7 @@ package com.yellow.tp_zoo.DataCapture
 
 import android.content.Context
 import com.yellow.tp_zoo.DataModel.DataZooInfo
-import com.yellow.tp_zoo.Unit.YellowCSVReader
+import com.yellow.tp_zoo.Utils.YellowCSVReader
 
 class GetZooData {
     var zooData: ArrayList<DataZooInfo>? = null
